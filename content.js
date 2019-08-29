@@ -9,7 +9,7 @@ $(document).ready(() => {
 
   chrome.storage.sync.get(["bingeMode"], result => {
     if (result.bingeMode === undefined) {
-      chrome.storage.sync.set({ bingeMode: true });
+      chrome.storage.sync.set({ bingeMode: false });
     }
     if (result.bingeMode) {
       setTimeout(bingeModeStart, 2000);

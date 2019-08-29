@@ -1,0 +1,25 @@
+{
+  "manifest_version": 2,
+  "name": "Crunchyroll Full Screen, All The Time",
+  "version": "0.4",
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.crunchyroll.com/*/*",
+        "http://www.crunchyroll.com/*/*"
+      ],
+      "js": ["jquery-3.4.1.min.js", "content.js"]
+    }
+  ],
+  "browser_action": {
+    "default_title": "Crunchyroll Fullscreen",
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "storage"
+  ],
+  "background": {
+    "scripts": ["background.js"],
+    "persistant": false
+  }
+}

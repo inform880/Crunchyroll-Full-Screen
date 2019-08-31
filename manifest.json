@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "Crunchyroll Full Screen, All The Time",
-  "description": "This extension keeps the anime streaming site Crunchyroll fullscreen while autoplaying. Click on a show, click on the toggle button, and press F11, and enjoy your binge.",
+  "description": "Keeps fullscreen, even after autoplay. Click on a show, click on the toggle button, and press F11, and enjoy your binge.",
   "version": "0.4",
   "content_scripts": [
     {

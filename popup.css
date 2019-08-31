@@ -1,0 +1,29 @@
+html,
+body {
+  background-color: #333333;
+  color: white;
+  height: 120px;
+}
+
+button {
+  width: 200px;
+  height: 40px;
+  background-color: #222222;
+  color: white;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #1a1a1a;
+}
+
+button:active {
+  background-color: #2a2a2a;
+  outline: none;
+}
+
+button:focus {
+  outline: none;
+}

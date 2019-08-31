@@ -1,9 +1,16 @@
-document.addEventListener("DOMContentLoaded", function() {
-  var toggle = document.getElementById("toggleBingeMode");
+document.addEventListener('DOMContentLoaded', async () => {
+  const mode = await new Promise(resolve =>
+    chrome.storage.sync.get(['bingeMode'], ({ bingeMode }) =>
+      resolve(bingeMode)
+    )
+  );
 
-  toggle.addEventListener("click", function() {
-    chrome.storage.sync.get(["bingeMode"], result => {
-      chrome.storage.sync.set({ bingeMode: !result.bingeMode });
-    });
-  });
+  document.getElementById('mode').textContent = mode ? 'on' : 'off';
+
+  document.getElementById('toggleBingeMode').addEventListener('click', () =>
+    chrome.storage.sync.get(['bingeMode'], ({ bingeMode }) => {
+      chrome.storage.sync.set({ bingeMode: !bingeMode });
+      document.getElementById('mode').textContent = !bingeMode ? 'on' : 'off';
+    })
+  );
 });
